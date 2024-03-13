@@ -10,6 +10,7 @@
     <script type="module" src="dist/quote.js" defer></script>
     <script type="module" src="dist/background.js" defer></script>
     <script type="module" src="dist/weather.js" defer></script>
+    <script type="module" src="dist/todo.js" defer></script>
   </head>
   <body>
     <h1 id="greetings" class="hidden"></h1>
@@ -24,6 +25,16 @@
       />
     </form>
     <h2 id="clock"></h2>
+    <form id="todo-form">
+      <input
+        minlength="2"
+        maxlength="15"
+        type="text"
+        id="todo-input"
+        placeholder="할 일 리스트를 작성해 주세요"
+      />
+    </form>
+    <ul id="todo-list"></ul>
     <p id="quote"></p>
     <div id="weather">
       <span id="weather__name">날씨</span>
