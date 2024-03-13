@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Window</title>
     <link rel="stylesheet" href="style/style.css" />
-    <script type="module" src="dist/greetings.js" defer></script>
+    <script type="module" src="dist/login.js" defer></script>
     <script type="module" src="dist/clock.js" defer></script>
     <script type="module" src="dist/quote.js" defer></script>
     <script type="module" src="dist/background.js" defer></script>
@@ -13,36 +13,44 @@
     <script type="module" src="dist/todo.js" defer></script>
   </head>
   <body>
-    <h1 id="greetings" class="hidden"></h1>
-    <form id="login-form" class="hidden">
-      <input
-        type="text"
-        id="login-username"
-        placeholder="닉네임을 입력 후 엔터를 눌러주세요"
-        minlength="2"
-        maxlength="15"
-        required
-      />
-    </form>
-    <h2 id="clock"></h2>
-    <h3 id="day-info"></h3>
-    <form id="todo-form">
-      <input
-        minlength="2"
-        maxlength="15"
-        type="text"
-        id="todo-input"
-        placeholder="할 일 리스트를 작성해 주세요"
-      />
-    </form>
-    <ul id="todo-list"></ul>
-    <p id="quote"></p>
-    <div id="weather">
-      <span id="weather__name">날씨</span>
-      <span id="weather__conditions">정보</span>
-      <span id="weather__temp">불러오는중..</span>
-    </div>
-    <!-- 투두리스트 -->
-    <!-- 날씨 정보 -->
+    <section class="lock-screen">
+      <div class="lock-screen__wrap">
+        <h2 id="clock"></h2>
+        <h3 id="day-info"></h3>
+        <form id="login-form">
+          <input
+            type="password"
+            id="password"
+            minlength="4"
+            maxlength="15"
+            placeholder="암호를 설정하고 엔터를 눌러주세요"
+            required
+          />
+          <p class="hint">
+            암호가 틀렸습니다! 암호는
+            <span class="hint__pw"></span> 입니다만..
+          </p>
+        </form>
+        <p id="quote"></p>
+        <form id="todo-form" class="hidden">
+          <input
+            minlength="2"
+            maxlength="15"
+            type="text"
+            id="todo-input"
+            placeholder="할 일 리스트를 작성해 주세요"
+          />
+        </form>
+        <ul id="todo-list"></ul>
+        <div id="weather" class="hidden">
+          <span id="weather__name">날씨</span>
+          <span id="weather__conditions">정보</span>
+          <span id="weather__temp">불러오는중..</span>
+        </div>
+      </div>
+    </section>
+    <section class="screen" class="hidden">
+      <h1>로그인 성공 페이지</h1>
+    </section>
   </body>
 </html>
