@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="style/style.css" />
     <script type="module" src="dist/greetings.js" defer></script>
     <script type="module" src="dist/clock.js" defer></script>
+    <script type="module" src="dist/quote.js" defer></script>
+    <script type="module" src="dist/background.js" defer></script>
   </head>
   <body>
+    <h1 id="greetings" class="hidden"></h1>
     <form id="login-form" class="hidden">
       <input
         type="text"
         id="login-username"
-        placeholder="닉네임을 입력해주세요"
+        placeholder="닉네임을 입력 후 엔터를 눌러주세요"
         minlength="2"
         maxlength="15"
         required
       />
-      <button>확인</button>
     </form>
-    <h2 id="greetings" class="hidden"></h2>
-    <div id="clock"></div>
-    <!-- 시계 기능 -->
-    <!-- 투두리스트 -->
+    <h2 id="clock"></h2>
+    <p id="quote"></p>
     <!-- 랜덤배경과 명언 -->
+    <!-- 투두리스트 -->
     <!-- 날씨 정보 -->
   </body>
 </html>

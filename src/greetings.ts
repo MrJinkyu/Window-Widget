@@ -23,7 +23,6 @@ function paintUsername(username: string) {
 }
 
 const saveUsername = localStorage.getItem(USER_NAME_KEY);
-console.log(saveUsername);
 if (saveUsername == null) {
   loginForm.classList.remove(CLASS_NAME);
   loginForm.addEventListener("submit", onLoginSubmit);
