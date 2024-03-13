@@ -36,6 +36,14 @@ li {
   z-index: -1;
 }
 
+#clock {
+  font-size: 5rem;
+}
+
+#day-info {
+  font-size: 1.2rem;
+}
+
 .todo-item.checked {
   text-decoration: line-through;
   color: lightgray;
