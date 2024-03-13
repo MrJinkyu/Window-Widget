@@ -9,6 +9,7 @@
     <script type="module" src="dist/clock.js" defer></script>
     <script type="module" src="dist/quote.js" defer></script>
     <script type="module" src="dist/background.js" defer></script>
+    <script type="module" src="dist/weather.js" defer></script>
   </head>
   <body>
     <h1 id="greetings" class="hidden"></h1>
@@ -24,7 +25,11 @@
     </form>
     <h2 id="clock"></h2>
     <p id="quote"></p>
-    <!-- 랜덤배경과 명언 -->
+    <div id="weather">
+      <span id="weather__name">날씨</span>
+      <span id="weather__conditions">정보</span>
+      <span id="weather__temp">불러오는중..</span>
+    </div>
     <!-- 투두리스트 -->
     <!-- 날씨 정보 -->
   </body>
