@@ -140,3 +140,11 @@ li {
     transform: translateX(0);
   }
 }
+
+/* Screen */
+.screen {
+  background: url("/assets/background.jpg") center/cover no-repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
