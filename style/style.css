@@ -143,63 +143,94 @@ li {
   height: 100vh;
   overflow: hidden;
   position: relative;
-}
-
-.screen__bar {
-  background-color: #e6f2fc;
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 40px;
 }
 
-#weather__name {
-  margin-right: 10px;
-}
-
-.screen__center {
+/* App */
+.app {
+  z-index: 2;
   display: flex;
+  gap: 20px;
 }
 
-.screen__right {
+.app__drawing-board,
+.app__music-player,
+.app_calculator {
+  width: 350px;
+  height: 400px;
+  background-color: white;
+}
+
+.app__drawing-board {
+  width: 350px;
+  height: 400px;
+  background-color: white;
+}
+
+.board-header {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgray;
 }
 
-.screen__center .fa-solid {
-  font-size: 40px;
-  color: gray;
-  transition: all 150ms linear;
+.board-header i {
   cursor: pointer;
-  margin: 0 20px;
+  transition: all 150ms linear;
 }
 
-.fa-cloud-sun:hover {
-  color: gold;
+.board-header i:hover {
+  color: white;
 }
 
-.fa-palette:hover {
-  color: lightseagreen;
+.colors {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.fa-music:hover {
-  color: tomato;
+.color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.fa-calculator:hover {
-  color: orange;
+.file-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+#file {
+  display: none;
+}
+
+#board {
+  width: 350px;
+  height: 350px;
+}
+
+.app__music-player {
+}
+
+.app_calculator {
+}
+
+/* To Do List */
 .todo {
+  z-index: 1;
+  position: fixed;
+  top: 10px;
+  left: 10px;
   background-color: lightskyblue;
   width: 300px;
   height: 300px;
-  margin: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -257,4 +288,56 @@ li {
   padding: 10px;
   overflow-y: auto;
   width: 100%;
+}
+
+/* Screen-bar */
+
+.screen__bar {
+  background-color: #e6f2fc;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+#weather__name {
+  margin-right: 10px;
+}
+
+.screen__center {
+  display: flex;
+}
+
+.screen__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.screen__center .fa-solid {
+  font-size: 40px;
+  color: gray;
+  transition: all 150ms linear;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.fa-cloud-sun:hover {
+  color: gold;
+}
+
+.fa-palette:hover {
+  color: lightseagreen;
+}
+
+.fa-music:hover {
+  color: tomato;
+}
+
+.fa-calculator:hover {
+  color: orange;
 }

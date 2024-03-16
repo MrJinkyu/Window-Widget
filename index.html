@@ -15,6 +15,7 @@
     <script type="module" src="dist/background.js" defer></script>
     <script type="module" src="dist/weather.js" defer></script>
     <script type="module" src="dist/todo.js" defer></script>
+    <script type="module" src="dist/canvas.js" defer></script>
   </head>
   <body>
     <section class="lock-screen hidden">
@@ -52,13 +53,71 @@
         </form>
         <ul id="todo-list"></ul>
       </div>
+      <div class="app">
+        <div class="app__drawing-board">
+          <div class="board-header">
+            <i class="fa-solid fa-rotate-right"></i>
+            <i class="fa-solid fa-paintbrush"></i>
+            <div class="colors">
+              <div
+                class="color"
+                data-color="#000"
+                style="background-color: #000"
+              ></div>
+              <div
+                class="color"
+                data-color="#e74c3c"
+                style="background-color: #e74c3c"
+              ></div>
+              <div
+                class="color"
+                data-color="#e67e22"
+                style="background-color: #e67e22"
+              ></div>
+              <div
+                class="color"
+                data-color="#f1c40f"
+                style="background-color: #f1c40f"
+              ></div>
+              <div
+                class="color"
+                data-color="#27ae60"
+                style="background-color: #27ae60"
+              ></div>
+              <div
+                class="color"
+                data-color="#3498db"
+                style="background-color: #3498db"
+              ></div>
+              <div
+                class="color"
+                data-color="#34495e"
+                style="background-color: #34495e"
+              ></div>
+
+              <div
+                class="color"
+                data-color="#8e44ad"
+                style="background-color: #8e44ad"
+              ></div>
+            </div>
+            <i class="fa-solid fa-eraser"></i>
+            <label class="file-label" for="file"
+              ><i class="fa-solid fa-image"></i><input type="file" id="file"
+            /></label>
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <canvas id="board"></canvas>
+        </div>
+        <div class="app__music-player"></div>
+        <div class="app_calculator"></div>
+      </div>
       <div class="screen__bar">
         <div class="screen__left">
           <span id="weather__name">날씨</span>
           <span id="weather__temp">불러오는중..</span>
         </div>
         <div class="screen__center">
-          <i class="fa-solid fa-cloud-sun"></i>
           <i class="fa-solid fa-palette"></i>
           <i class="fa-solid fa-music"></i>
           <i class="fa-solid fa-calculator"></i>
