@@ -51,11 +51,11 @@ li {
   opacity: 0.9;
 }
 
-#clock {
+.clock {
   font-size: 5rem;
 }
 
-#day-info {
+.day-info {
   font-size: 1.2rem;
 }
 
@@ -146,12 +146,53 @@ li {
 }
 
 .screen__bar {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #e6f2fc;
+  width: 100%;
+  height: 60px;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+#weather__name {
+  margin-right: 10px;
+}
+
+.screen__center {
+  display: flex;
+}
+
+.screen__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.screen__center .fa-solid {
+  font-size: 40px;
+  color: gray;
+  transition: all 150ms linear;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.fa-cloud-sun:hover {
+  color: gold;
+}
+
+.fa-palette:hover {
+  color: lightseagreen;
+}
+
+.fa-music:hover {
+  color: tomato;
+}
+
+.fa-calculator:hover {
+  color: orange;
 }
 
 .todo {

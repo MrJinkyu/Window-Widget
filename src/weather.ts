@@ -2,9 +2,6 @@
   const weatherName = document.querySelector(
     "#weather__name"
   )! as HTMLSpanElement;
-  const weatherConditions = document.querySelector(
-    "#weather__conditions"
-  )! as HTMLSpanElement;
   const weatherTemp = document.querySelector(
     "#weather__temp"
   )! as HTMLSpanElement;
@@ -17,8 +14,7 @@
       .then((res) => res.json())
       .then((data) => {
         weatherName.textContent = data.name;
-        weatherConditions.textContent = data.weather[0].main;
-        weatherTemp.textContent = `${data.main.temp}`;
+        weatherTemp.textContent = `${data.main.temp}도`;
       });
   }
   function errorCallback() {

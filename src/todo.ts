@@ -2,6 +2,7 @@
   const todoForm = document.querySelector("#todo-form")! as HTMLFormElement;
   const todoInput = todoForm.querySelector("#todo-input")! as HTMLInputElement;
   const todoList = document.querySelector("#todo-list")! as HTMLUListElement;
+
   let todos: Todo[] = [];
 
   type Todo = { id: string; text: string; checked: boolean };

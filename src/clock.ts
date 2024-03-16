@@ -1,7 +1,10 @@
 {
-  const clock = document.querySelector("#clock")! as HTMLHeadingElement;
-  const dayInfo = document.querySelector("#day-info")! as HTMLHeadingElement;
-
+  const clock = document.querySelector(".clock")! as HTMLHeadingElement;
+  const dayInfo = document.querySelector(".day-info")! as HTMLHeadingElement;
+  const smClock = document.querySelector(".sm-clock")! as HTMLParagraphElement;
+  const smDayInfo = document.querySelector(
+    ".sm-day-info"
+  )! as HTMLParagraphElement;
   function getCurrentTime() {
     const date = new Date();
     const hours = String(date.getHours()).padStart(2, "0");
@@ -12,6 +15,8 @@
     const day = days[date.getDay()];
     clock.textContent = `${hours}:${minutes}`;
     dayInfo.textContent = `${month}월 ${dateDay}일 ${day}요일`;
+    smClock.textContent = `${hours}:${minutes}`;
+    smDayInfo.textContent = `${month}월 ${dateDay}일 ${day}요일`;
   }
 
   getCurrentTime();

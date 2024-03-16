@@ -19,8 +19,8 @@
   <body>
     <section class="lock-screen hidden">
       <div class="lock-screen__wrap">
-        <h2 id="clock"></h2>
-        <h3 id="day-info"></h3>
+        <h2 class="clock"></h2>
+        <h3 class="day-info"></h3>
         <form id="login-form">
           <input
             type="password"
@@ -36,11 +36,6 @@
           </p>
         </form>
         <p id="quote"></p>
-        <div id="weather" class="hidden">
-          <span id="weather__name">날씨</span>
-          <span id="weather__conditions">정보</span>
-          <span id="weather__temp">불러오는중..</span>
-        </div>
       </div>
     </section>
     <section class="screen">
@@ -57,7 +52,22 @@
         </form>
         <ul id="todo-list"></ul>
       </div>
-      <div class="screen__bar"></div>
+      <div class="screen__bar">
+        <div class="screen__left">
+          <span id="weather__name">날씨</span>
+          <span id="weather__temp">불러오는중..</span>
+        </div>
+        <div class="screen__center">
+          <i class="fa-solid fa-cloud-sun"></i>
+          <i class="fa-solid fa-palette"></i>
+          <i class="fa-solid fa-music"></i>
+          <i class="fa-solid fa-calculator"></i>
+        </div>
+        <div class="screen__right">
+          <p class="sm-clock"></p>
+          <p class="sm-day-info"></p>
+        </div>
+      </div>
     </section>
   </body>
 </html>
