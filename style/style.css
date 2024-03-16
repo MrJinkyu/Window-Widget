@@ -115,11 +115,6 @@ li {
   transform: translate(-50%, -50%);
 }
 
-.todo-item.checked {
-  text-decoration: line-through;
-  color: lightgray;
-}
-
 @keyframes fail {
   0% {
     transform: translateX(0);
@@ -143,8 +138,82 @@ li {
 
 /* Screen */
 .screen {
-  background: url("/assets/background.jpg") center/cover no-repeat;
+  background: url("/assets/screen.jpg") center/cover no-repeat;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  position: relative;
+}
+
+.screen__bar {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.todo {
+  background-color: lightskyblue;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo__header {
+  width: 100%;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#todo-form {
+  padding: 10px;
+}
+
+#todo-input {
+  width: 100%;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.todo-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.todo-item.checked .todo-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-text {
+  flex: 1 1 auto;
+  margin-left: 5px;
+}
+
+.fa-trash-can {
+  border: none;
+  background-color: transparent;
+  color: black;
+  transition: all 150ms linear;
+  cursor: pointer;
+}
+
+.fa-trash-can:hover {
+  color: orangered;
+}
+
+#todo-list {
+  padding: 10px;
+  overflow-y: auto;
+  width: 100%;
 }

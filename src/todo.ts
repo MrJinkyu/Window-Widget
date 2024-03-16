@@ -26,7 +26,7 @@
   }
 
   function deletedToDoItem(e: Event) {
-    const target = e.target! as HTMLButtonElement;
+    const target = e.target! as HTMLElement;
     const item = target.parentElement! as HTMLLIElement;
     item.remove();
     todos = todos.filter((todo) => todo.id !== item.id);
@@ -52,9 +52,8 @@
     span.textContent = todo.text;
     li.appendChild(span);
 
-    const deleteButton = document.createElement("button");
-    deleteButton.setAttribute("class", "todo-delete-btn");
-    deleteButton.textContent = "ｘ";
+    const deleteButton = document.createElement("i");
+    deleteButton.setAttribute("class", "fa-solid fa-trash-can");
     deleteButton.addEventListener("click", deletedToDoItem);
 
     if (todo.checked) {
