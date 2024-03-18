@@ -153,19 +153,22 @@ li {
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 .app__drawing-board,
 .app__music-player,
 .app_calculator {
-  width: 350px;
-  height: 400px;
-  background-color: white;
   border-radius: 1rem;
   overflow: hidden;
 }
 
+.deactivated {
+  transform: translateY(-200%);
+  width: 0;
+}
+
+/* Drawing Board */
 .app__drawing-board {
   width: 350px;
   height: 400px;
@@ -218,8 +221,9 @@ li {
   width: 350px;
   height: 350px;
 }
-/* Music */
+/* Music Player */
 .app__music-player {
+  width: 300px;
   height: 500px;
   background: rgb(245, 163, 183);
   background: linear-gradient(
@@ -334,9 +338,63 @@ li {
   flex: 1 1 auto;
 }
 
+/* Calculator  */
+
 .app_calculator {
+  width: 250px;
+  height: 350px;
+  background-color: rgb(46, 46, 46);
+  display: flex;
+  flex-direction: column;
 }
 
+.calculator__header {
+  height: 25%;
+  background-color: rgb(46, 46, 46);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: white;
+  padding: 4px 10px;
+}
+
+.calculator_result {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.calculator__body {
+  height: 75%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.calculator__body span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: lightgray;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.calculator__body span:hover {
+  filter: brightness(110%);
+}
+
+.calculator__num {
+  background-color: #3c4043;
+}
+
+.calculator__num.zero {
+  grid-column: span 2;
+}
+
+.calculator__controller {
+  background-color: #5f6368;
+}
 /* To Do List */
 .todo {
   z-index: 1;

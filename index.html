@@ -17,6 +17,8 @@
     <script type="module" src="dist/todo.js" defer></script>
     <script type="module" src="dist/canvas.js" defer></script>
     <script type="module" src="dist/music.js" defer></script>
+    <script type="module" src="dist/calculator.js" defer></script>
+    <script type="module" src="dist/app.js" defer></script>
   </head>
   <body>
     <section class="lock-screen hidden">
@@ -139,7 +141,32 @@
             <i class="fa-solid fa-volume-high"></i>
           </div>
         </div>
-        <div class="app_calculator"></div>
+        <div class="app_calculator">
+          <div class="calculator__header">
+            <span class="calculator_result">0</span>
+          </div>
+          <div class="calculator__body">
+            <span id="clear" class="calculator__controller">AC</span>
+            <span id="sign" class="calculator__controller">+/-</span>
+            <span id="percentage" class="calculator__controller">%</span>
+            <span id="divide" class="calculator__controller">÷</span>
+            <span class="calculator__num">7</span>
+            <span class="calculator__num">8</span>
+            <span class="calculator__num">9</span>
+            <span id="multiply" class="calculator__controller">×</span>
+            <span class="calculator__num">4</span>
+            <span class="calculator__num">5</span>
+            <span class="calculator__num">6</span>
+            <span id="minus" class="calculator__controller">−</span>
+            <span class="calculator__num">1</span>
+            <span class="calculator__num">2</span>
+            <span class="calculator__num">3</span>
+            <span id="plus" class="calculator__controller">+</span>
+            <span class="calculator__num zero">0</span>
+            <span id="dot" class="calculator__num">.</span>
+            <span id="equals" class="calculator__controller">=</span>
+          </div>
+        </div>
       </div>
       <div class="screen__bar">
         <div class="screen__left">
