@@ -152,6 +152,7 @@ li {
 .app {
   z-index: 2;
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -161,6 +162,8 @@ li {
   width: 350px;
   height: 400px;
   background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .app__drawing-board {
@@ -215,8 +218,120 @@ li {
   width: 350px;
   height: 350px;
 }
-
+/* Music */
 .app__music-player {
+  height: 500px;
+  background: rgb(245, 163, 183);
+  background: linear-gradient(
+    0deg,
+    rgba(245, 163, 183, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(245, 163, 183, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.music__header {
+  text-align: center;
+  color: white;
+  padding: 10px 0 30px;
+}
+
+.music__cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: url("/assets/member0.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music__cover.active {
+  animation: rotate 10s linear infinite;
+}
+
+.cover__dot {
+  width: 30px;
+  height: 30px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.music__title {
+  text-align: center;
+  color: orangered;
+  margin: 20px 0 40px;
+}
+
+#music__time-input,
+#music__volume-input {
+  all: unset;
+  height: 5px;
+  background: rgba(245, 163, 183, 1) 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.music__time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#music__time-input::-webkit-slider-thumb,
+#music__volume-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: rgb(252, 72, 117) 100%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#music__time-input::-moz-range-thumb,
+#music__volume-input::-moz-range-thumb {
+  background: rgb(252, 72, 117) 100%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#music__time-input::-ms-thumb,
+#music__volume-input::-ms-thumb {
+  background: rgb(252, 72, 117) 100%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.music__play-btns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0 30px;
+}
+
+#music__prev,
+#music__next,
+#music__play-stop-btn {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.music__volume {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+#music__volume-input {
+  flex: 1 1 auto;
 }
 
 .app_calculator {
@@ -225,7 +340,7 @@ li {
 /* To Do List */
 .todo {
   z-index: 1;
-  position: fixed;
+  position: absolute;
   top: 10px;
   left: 10px;
   background-color: lightskyblue;
@@ -340,4 +455,13 @@ li {
 
 .fa-calculator:hover {
   color: orange;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -16,6 +16,7 @@
     <script type="module" src="dist/weather.js" defer></script>
     <script type="module" src="dist/todo.js" defer></script>
     <script type="module" src="dist/canvas.js" defer></script>
+    <script type="module" src="dist/music.js" defer></script>
   </head>
   <body>
     <section class="lock-screen hidden">
@@ -109,7 +110,35 @@
           </div>
           <canvas id="board"></canvas>
         </div>
-        <div class="app__music-player"></div>
+        <div class="app__music-player">
+          <h2 class="music__header">Windows Music</h2>
+          <audio src="/music/Blizzards.mp3" id="music__audio"></audio>
+          <div class="music__cover">
+            <div class="cover__dot"></div>
+          </div>
+          <h3 class="music__title">blizzards</h3>
+          <input type="range" id="music__time-input" value="0" />
+          <div class="music__time">
+            <span class="music__time-start">0:00</span>
+            <span class="music__time-end">2:03</span>
+          </div>
+          <div class="music__play-btns">
+            <i class="fa-solid fa-backward" id="music__prev"></i>
+            <i class="fa-solid fa-play" id="music__play-stop-btn"></i>
+            <i class="fa-solid fa-forward" id="music__next"></i>
+          </div>
+          <div class="music__volume">
+            <i class="fa-solid fa-volume-low" id="volume-row-icon"></i>
+            <input
+              type="range"
+              id="music__volume-input"
+              min="0"
+              value="10"
+              max="100"
+            />
+            <i class="fa-solid fa-volume-high"></i>
+          </div>
+        </div>
         <div class="app_calculator"></div>
       </div>
       <div class="screen__bar">
