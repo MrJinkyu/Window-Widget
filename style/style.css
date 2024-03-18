@@ -153,24 +153,38 @@ li {
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: 40px;
 }
 
 .app__drawing-board,
 .app__music-player,
 .app_calculator {
   border-radius: 1rem;
+  width: 0;
+  transform: translateY(200%);
   overflow: hidden;
+  transition: all 350ms ease-in-out;
 }
 
-.deactivated {
-  transform: translateY(-200%);
-  width: 0;
+.app__drawing-board.active {
+  transform: translateY(0%);
+  width: 350px;
+  margin: 0 20px;
+}
+
+.app__music-player.active {
+  transform: translateY(0%);
+  width: 300px;
+  margin: 0 20px;
+}
+
+.app_calculator.active {
+  transform: translateY(0%);
+  width: 250px;
+  margin: 0 20px;
 }
 
 /* Drawing Board */
 .app__drawing-board {
-  width: 350px;
   height: 400px;
   background-color: white;
 }
@@ -223,7 +237,6 @@ li {
 }
 /* Music Player */
 .app__music-player {
-  width: 300px;
   height: 500px;
   background: rgb(245, 163, 183);
   background: linear-gradient(
@@ -341,7 +354,6 @@ li {
 /* Calculator  */
 
 .app_calculator {
-  width: 250px;
   height: 350px;
   background-color: rgb(46, 46, 46);
   display: flex;

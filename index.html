@@ -21,7 +21,7 @@
     <script type="module" src="dist/app.js" defer></script>
   </head>
   <body>
-    <section class="lock-screen hidden">
+    <section class="lock-screen">
       <div class="lock-screen__wrap">
         <h2 class="clock"></h2>
         <h3 class="day-info"></h3>
@@ -34,15 +34,16 @@
             placeholder="암호를 설정하고 엔터를 눌러주세요"
             required
           />
+
           <p class="hint">
-            암호가 틀렸습니다! 암호는
-            <span class="hint__pw"></span> 입니다만..
+            암호가 틀렸습니다! 설정된 암호는
+            <span class="hint__pw"></span> 입니다.
           </p>
         </form>
         <p id="quote"></p>
       </div>
     </section>
-    <section class="screen">
+    <section class="screen hidden">
       <div class="todo">
         <div class="todo__header"></div>
         <form id="todo-form">
