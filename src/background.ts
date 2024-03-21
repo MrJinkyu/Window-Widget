@@ -12,12 +12,9 @@
   const selectedBgURL =
     backgroundImgs[Math.floor(Math.random() * backgroundImgs.length)];
 
-  function printImg() {
-    const imgElement = document.createElement("img");
-    imgElement.setAttribute("id", "bg-img");
-    imgElement.setAttribute("src", `assets/${selectedBgURL}`);
-    lockScreen.prepend(imgElement);
+  function backgroundChange() {
+    lockScreen.style.background = `url(/assets/${selectedBgURL}) center/cover no-repeat`;
   }
 
-  printImg();
+  backgroundChange();
 }
